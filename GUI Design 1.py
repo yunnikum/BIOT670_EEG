@@ -1,3 +1,5 @@
+#Author: Obi Casel
+
 import tkinter as tk
 from tkinter.filedialog import askopenfilename, asksaveasfilename
 def eeg_o():
