@@ -3,24 +3,24 @@
 import tkinter as tk
 from tkinter.filedialog import askopenfilename, asksaveasfilename
 def eeg_o():
-	"Please upload an tff file"
+	"Please upload an tiff file"
 	path = askopenfilename (
-		filetypes = [("Tff Files", "*.tff"), ("All files", "*.*")]
+		filetypes = [("Tiff Files", "*.tiff"), ("All files", "*.*")]
 	)
 	if not path:
 		return
 	words.delete(1.0, tk.END)
-	with open (path, "r") as tff_input:
-		tff = tff_input.read()
-		words.insert(tk.END, tff)
+	with open (path, "r") as tiff_input:
+		tff = tiff_input.read()
+		words.insert(tk.END, tiff)
 	window.title(f"EEG 3.0 Reader - {path}")
 
 	
 def eeg_s():
 	"Save tff file"
 	path = asksaveasfilename (
-		defaultextension = "tff",
-		filetypes = [("Tff Files", "*.tff"), ("All files", "*.*")]
+		defaultextension = "tiff",
+		filetypes = [("Tiff Files", "*.tiff"), ("All files", "*.*")]
 	)
 	if not path:
 		return
